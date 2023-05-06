@@ -8,11 +8,9 @@
     --color-gray: #808080;
     --color-silver: #C0C0C0;
     --color-blue: #0864B4;
-    --color-royalblue: #4169E1;
     --color-whitesmoke: #F5F5F5;
     --color-orangered: #FF4500;
     --color-redorange: #F5291D;
-    --color-cian: #DFF6FF;
 }
 
 ::-webkit-scrollbar {
@@ -72,21 +70,6 @@ section #sideMenu .sideMenuTitle {
     display: flex;
     justify-content: space-between;
     padding-left: 1rem;
-}
-
-section #sideMenu .sideMenuTitle a {
-    text-decoration: none;
-    color: var(--color-black);
-}
-
-section #sideMenu .sideMenuTitle h2 {
-    margin: 0;
-    padding-top: 1rem;
-    font-family: monospace;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--color-royalblue);
 }
 
 section #sideMenu .sideMenuTitle img {
@@ -232,7 +215,7 @@ section .headerBackground {
     width: 100%;
     height: 3.75rem;
     z-index: 1;
-    background-color: var(--color-white);
+    background-color: var(--color-orangered);
     opacity: 80%;
 }
 
@@ -264,18 +247,11 @@ header .headerElements img {
 
 header .headerElements .logo {
     display: none;
-    width: 10rem;
-    height: 3rem;
-    padding-top: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 0.4rem;
-    padding-left: 0rem;
-    background-color: var(--color-blue);
 }
 
 header .headerElements .mobileLogo {
     display: block;
-    width: 10rem;
+    width: 9rem;
     height: 3rem;
     padding-top: 0rem;
     padding-right: 0rem;
@@ -286,45 +262,20 @@ header .headerElements .mobileLogo {
 
 header .headerElements .search {
     display: none;
-    width: 40%;
-    height: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-left: 1rem;
-    border-width: 0rem;
-    border-color: var(--color-orangered);
-    border-radius: 0.2rem;
-    font-weight: bold;
-    color: var(--color-gray);
 }
 
 header .headerElements .account {
     display: none;
-    border-style: solid;
-    border-width: 0.063rem;
-    border-color: var(--color-white);
-    border-radius: 10rem;
-    padding: 0.2rem;
 }
 
 header .headerElements .doLoginOrSign {
     display: none;
-    width: 8%;
-    padding-left: 1rem;
-    color: var(--color-white);
-    font-size: 0.8rem;
 }
 
 body .headerOptions {
     display: none;
-    position: fixed;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin-top: 4rem;
-    z-index: 2;
-    background-color: var(--color-orangered);
 }
+
 /* END OF HEADER SETTINGS. */
 
 /* MAIN SETTINGS. */
@@ -333,7 +284,7 @@ main {
     height: auto;
 }
 
-.mainSlider {
+main .mainSlider {
     display: flex;
     width: 100%;
     height: 10%;
@@ -343,7 +294,7 @@ main {
     background-color: var(--color-whitesmoke);
 }
 
-.slider {
+main .slider {
     display: block;
     position: relative;
     width: 100%;
@@ -351,44 +302,44 @@ main {
     overflow: hidden;
 }
 
-.slides {
+main .slides {
     width: 100%;
-    padding-top: 100%;
+    padding-top: 50%;
 }
 
-.slide {
+main .slide {
     display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
-    justify-content: center;  
+    justify-content: center;   
     top: 0;
     left: 0;
     transition: 1s ease;
     opacity: 0;
 }
 
-.slide.active {
+main .slide.active {
     opacity: 1;
 }
 
-.slide img {
+main .slide img {
     width: 100%;
     height: auto;
     border-radius: 0rem;
 }
 
-.arrows {
+main .arrows {
     display: flex;
     position: relative;
     width: 100%;
     height: 100%;
     bottom: 2rem;
     justify-content: space-between;
+    transform: translateY(-150%);
 }
 
-#previous {
-    position: relative;
+main #previous {
     width: 3rem;
     height: 3rem;
     z-index: 0;
@@ -399,12 +350,12 @@ main {
     background-color: var(--color-silver);
 }
 
-#previous img {
+main #previous img {
     width: 100%;
     height: auto;
 }
 
-#next {
+main #next {
     width: 3rem;
     height: 3rem;
     z-index: 0;
@@ -415,12 +366,12 @@ main {
     background-color: var(--color-silver);
 }
 
-#next img {
+main #next img {
     width: 100%;
     height: auto;
 }
 
-.navigation {
+main .navigation {
     display: flex;
     position: absolute;
     left: 50%;
@@ -428,7 +379,7 @@ main {
     transform: translateX(-50%);
 }
 
-.navigationLink {
+main .navigationLink {
     display: block;
     height: 1rem;
     width: 1rem;
@@ -442,7 +393,7 @@ main {
     background-color: var(--color-whitesmoke);
 }
 
-.navigationLink.active {
+main .navigationLink.active {
     border-style: solid;
     border-width: 0.063rem;
     border-color: var(--color-orangered);
@@ -459,6 +410,7 @@ main .bar {
     margin-bottom: 1rem;
     margin-left: 0.5rem;
     border-radius: 0.2rem;
+    text-align: center;
     background-color: var(--color-orangered);
 }
 
@@ -476,7 +428,7 @@ main .bar .barItems h3 {
     color: var(--color-white);
 }
 
-main .structureOfTheList {
+main #structureOfTheListOne {
     width: 1280px;
     width: 100%;
     overflow: auto;
@@ -486,7 +438,21 @@ main .structureOfTheList {
     scroll-snap-type: both;
 }
 
-main .structureOfTheList::-webkit-scrollbar{
+main #structureOfTheListTwo {
+    width: 1280px;
+    width: 100%;
+    overflow: auto;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+
+main #structureOfTheListOne::-webkit-scrollbar{
+    display: none;
+}
+
+main #structureOfTheListTwo::-webkit-scrollbar{
     display: none;
 }
 
@@ -512,7 +478,7 @@ main .item {
     background-color: var(--color-white);
 }
 
- main .item a {
+main .item a {
     width: 100%;
     height: 100%;
     text-decoration: none;
@@ -589,6 +555,41 @@ main .item .itemContent .pix {
 main .itemContent .installmentPrice {
     color: var(--color-gray);
 }
+
+main .directionOne {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    transform: translateY(-700%);
+    cursor: pointer;
+}
+
+main .directionOne img {
+    width: 3rem;
+    border-radius: 10rem;
+    background-color: var(--color-blue);
+    opacity: 70%;
+}
+
+main .directionTwo {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    transform: translateY(-700%);
+    cursor: pointer;
+}
+
+main .directionTwo img {
+    width: 3rem;
+    border-radius: 10rem;
+    background-color: var(--color-blue);
+    opacity: 70%;
+}
+/* END OF THE MAIN SETTINGS. */
 
 /* FOOTER SETTINGS. */
 footer {

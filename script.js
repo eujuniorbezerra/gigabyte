@@ -51,6 +51,26 @@ document.querySelectorAll('.navigationLink').forEach((bullet, bulletIndex) => {
 })
 /* END OF BANNER NAVIGATION. */
 
+/* MAIN SLIDERS. */
+document.getElementById('nextOne').onclick = function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('structureOfTheListOne').scrollLeft += widthItem;
+};
+document.getElementById('previousOne').onclick = function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('structureOfTheListOne').scrollLeft -= widthItem;
+};
+
+document.getElementById('nextTwo').onclick = function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('structureOfTheListTwo').scrollLeft += widthItem;
+};
+document.getElementById('previousTwo').onclick = function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('structureOfTheListTwo').scrollLeft -= widthItem;
+};
+/* END OF MAIN SLIDERS. */
+
 /* FOOTER HIDE AND UNHIDE MENU'S. */
 let footerListOne = document.getElementById("paymentMethods").onclick = function paymentFunction() {
     if (unhidePaymentMethods.style.display != "block") {
