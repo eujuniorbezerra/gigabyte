@@ -1,2 +1,1 @@
 # gigabyte
-jkkjk
